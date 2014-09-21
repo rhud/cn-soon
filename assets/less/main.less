@@ -1,0 +1,117 @@
+// Bootstrap
+@import "_bootstrap";
+
+// Roots
+@import "_global";                   // Base styling & custom mixins
+@import "components/_buttons";       // Button tweaks
+@import "components/_forms";         // Form tweaks
+@import "components/_media";         // WordPress media
+@import "components/_wp-classes";    // WordPress generated classes
+@import "layouts/_general";          // General styling
+@import "layouts/_header";           // Header styling
+@import "layouts/_sidebar";          // Sidebar styling
+@import "layouts/_footer";           // Footer styling
+@import "layouts/_pages";            // Page styling
+@import "layouts/pages/_home";       // Home page styling
+@import "layouts/_posts";            // Post styling
+
+body {
+	background: black;
+}
+
+header {
+	background: white;
+	border-radius: 0px;
+	margin-bottom: 0px !important;
+}
+
+.logo {
+	width: 300px;
+	height: 100px;
+	position: relative;
+	margin: 50px auto;
+	background: url(/assets/img/cn.logo.png) center center;
+	background-size: 300px 100px;
+}
+
+h1 {
+	color: @goldl;
+	font-size: 150%;
+	letter-spacing: 10px;
+	line-height: 1.5;
+}
+
+.soon {
+	width: 100%;
+	padding: 100px 0px;
+	text-align: center;
+	background: @greyd;
+}
+
+footer {
+	padding: 50px 0px;
+	text-align: center;
+	#contactform {
+		input, textarea {
+			font-size: 90%;
+			padding: 8px 10px;
+			//width: 80% !important;
+			background: @greyd;
+			border: none;
+			border-bottom: 1px solid @goldd;
+			margin: 5px auto;
+			color: white;
+			outline: none;
+			.placeholder(@goldd);
+			&.wpcf7-submit {
+				background: @goldl;
+				font-family: @font-family-sans-serif;
+				color: black;
+				width: auto;
+				padding: 10px 50px;
+				border-bottom: 1px solid @goldd;
+			}
+		}
+	}
+}
+
+.wpcf7-response-output.wpcf7-validation-errors, .wpcf7-response-output.wpcf7-mail-sent-ok {
+	background: @greyd;
+	color: white;
+	padding: 50px;
+	border: none;
+	font-family: @font-family-serif;
+	font-size: 140%;
+}
+
+span.wpcf7-not-valid-tip {
+	color: white;
+}
+
+
+@media (min-width: @screen-sm-min) { 
+	.logo {
+		width: 450px;
+		height: 150px;
+		position: relative;
+		margin: 50px auto;
+		background: url(/assets/img/cn.logo.png) center center;
+		background-size: 450px 150px;
+	}
+
+}
+
+@media (min-width: @screen-md-min) {
+
+
+}
+
+@media (min-width: @screen-lg-min) { 
+
+
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {    
+
+
+}
